@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using MTAssets.MobileInputControls;
 
 // This script moves the character controller forward
 // and sideways based on the arrow keys.
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
+    public JoystickAxis movementJoystick;
+    public DragArea rotationTouchArea;
 
     private Vector3 moveDirection = Vector3.zero;
 
@@ -26,10 +29,15 @@ public class PlayerController : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
+            if (movementJoystick.pressed == true)
+            {
+                moveDirection = new Vector3(movementJoystick.inputVector.x, 0.0f, movementJoystick.inputVector.y);
+            } else {
+                moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+            }
             // We are grounded, so recalculate
             // move direction directly from axes
 
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
             moveDirection *= speed;
 
             //if (Input.GetButton("Jump"))

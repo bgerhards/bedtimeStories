@@ -1,0 +1,48 @@
+
+/////////////////////
+	  MT ASSETS
+	  CHANGELOG
+/////////////////////
+
+v1.4.0
+	- Added a new demo scene.
+	- Fixed a bug when importing this asset for the first time, where a file error message was displayed.
+	  It was more common with Windows 10 users.
+	- There was a slight change in the asset API. Now, to access the API methods of this asset,
+	  use "using MTAssets.MobileInputControls".
+
+v1.3.2
+	- Improvements to undo actions.
+	- Script improvements.
+
+v1.3.1
+	- Joystick script improvements. You may need to delete the joystick GameObjects, and re-create them after upgrading
+	  to this version for everything to work properly.
+	- Improvements in the description of UI elements.
+	- Added a multiplier to read the moves made in the Drag Area component.
+	- Minor additions to the asset menu.
+	- Improvement of some asset codes.
+
+v1.2.1
+	- Fix a bug with the welcome message.
+	- Small housekeeping in scripts
+	- Improvement in the character's movement script, in the use example scene.
+
+v1.1.2
+	- The compatibility of the tool has been extended among more Unity versions!
+
+v1.1.1
+	- Minor improvements in code.
+
+v1.1
+	- The minimum support version is now Unity 2018.1.0f2. This change was made to ensure future improvements to the tool! Stay tuned!
+
+v1.0
+	- The Mobile Input Controls has just been released! I will always be working to support and add new features!
+	  Do you have any suggestions, Bug reports or any problems with using this asset? Contact by email!
+	  (mtassets@windsoft.xyz)
+
+/////////////////////
+  Email for support
+mtassets@windsoft.xyz
+/////////////////////
